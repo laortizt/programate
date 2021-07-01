@@ -1,0 +1,13 @@
+{
+    "name": "asus/porfin",
+    "description": "Se acabo esto",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "laortizt",
+            "email": "70719056+laortizt@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
