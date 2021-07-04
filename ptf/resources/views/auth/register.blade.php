@@ -139,11 +139,10 @@
                   </span>
                 </div>
                 
-                <select class="form-control"  name='type' placeholder="{{ __('Rol...') }}" value="{{ old('type') }}"required >
-                     <option selected> Selecione el rol</option>
-                        <option selected>Cliente</option>
-                        <option selected>Profesional</option>
-                        
+                <select class="form-control" name='type' placeholder="{{ __('Rol...') }}" value="{{ old('type') }}" required >
+                  <option selected>Selecione el rol</option>
+                  <option value="1">Cliente</option>
+                  <option value="2">Profesional</option>
                 </select>
               </div>
               
@@ -157,7 +156,7 @@
 
             <div class="form-check mr-auto ml-3 mt-3">
               <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" id="policy" name="policy" {{ old('policy', 1) ? 'checked' : '' }} >
+                <input class="form-check-input" type="checkbox" id="policy" name="policy">
                 <span class="form-check-sign">
                   <span class="check"></span>
                 </span>
@@ -165,6 +164,7 @@
               </label>
             </div>
           </div>
+
           <div class="card-footer justify-content-center">
             <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Crear cuenta') }}</button>
           </div>

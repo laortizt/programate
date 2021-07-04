@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('telephone')->nullable();
             $table->unsignedInteger('idcountryFK');
             $table->foreign('idcountryFK')->references('id')->on('countries');
-            $table->boolean('type');
+            $table->integer('type');
             $table->rememberToken();
             $table->timestamps();
         });

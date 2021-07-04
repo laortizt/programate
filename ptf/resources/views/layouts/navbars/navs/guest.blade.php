@@ -37,6 +37,7 @@
             <i class="material-icons">face</i> {{ __('Profile') }}
           </a>
         </li> --}}
+        
       </ul>
     </div>
   </div>

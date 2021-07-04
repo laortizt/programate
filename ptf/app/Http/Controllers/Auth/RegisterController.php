@@ -54,11 +54,11 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'idcountryFK' => ['required', 'string', 'max:255', 'confirmed'],
-            'telephone' => ['required', 'string', 'min:9', 'confirmed'],
-            'type' => ['required', 'boolean',  'confirmed'],
+            'idcountryFK' => ['required', 'integer', 'max:255'],
+            'telephone' => ['required', 'string'],
+            'type' => ['required', 'integer', 'min:1', 'max:2'],
         ]);
-    }
+    } 
 
     protected function showRegistrationForm() {
         $countries = Country::all();
@@ -77,7 +77,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'idcountryFK ' => $data['idcountryFK '],
+            'idcountryFK' => $data['idcountryFK'],
             'telephone' => $data['telephone'],
             'type' => $data['type'],
         ]);
