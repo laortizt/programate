@@ -29,7 +29,7 @@
       <script>
         document.write(new Date().getFullYear())
       </script>, Hecho con <i class="material-icons">favorite</i> por
-      <a href="https://www.creative-tim.com" target="_blank">Luz Adriana Ortiz</a> proyecto final.
+      <!-- <a href="https://www.creative-tim.com" target="_blank">Luz Adriana Ortiz</a> proyecto final. -->
     </div>
   </div>
 </footer>

@@ -17,9 +17,9 @@
             <i class="material-icons">dashboard</i> {{ __('Dashboard') }}
           </a>
         </li> -->
-        <li class="nav-item{{ $activePage == 'home' ? ' active' : '' }}">
-          <a href="{{ route('home') }}" class="nav-link">
-            <i class="material-icons">person_add</i> {{ __('Inicio') }}
+        <li class="nav-item{{ $activePage == 'welcome' ? ' active' : '' }}">
+          <a href="{{ route('welcome') }}" class="nav-link">
+            <i class="material-icons">house</i> {{ __('Inicio') }}
           </a>
         </li>
         <li class="nav-item{{ $activePage == 'register' ? ' active' : '' }}">

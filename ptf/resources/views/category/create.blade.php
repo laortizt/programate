@@ -1,7 +1,8 @@
-@extends('layouts.app')
+<!-- @extends('layouts.main', ['activePage' => 'category', 'titlePage' => ('nueva categoria')]) -->
 
 @section('content')
 
+<div class="content">
 <div class="container-fluid">
     <h1>Registrar Categoría</h1>
 
@@ -20,6 +21,8 @@
         
     </div>
 </div>
+</div>
+
 
 
 

@@ -10,7 +10,7 @@
               <div class="card-icon">
                 <i class="material-icons">content_copy</i>
               </div>
-              <p class="card-category">Used Space</p>
+              <p class="card-category">Profesionales</p>
               <h3 class="card-title">49/50
                 <small>GB</small>
               </h3>
@@ -18,6 +18,8 @@
             <div class="card-footer">
               <div class="stats">
                 <i class="material-icons text-danger">warning</i>
+
+                
                 <a href="#pablo">Get More Space...</a>
               </div>
             </div>
@@ -29,7 +31,7 @@
               <div class="card-icon">
                 <i class="material-icons">store</i>
               </div>
-              <p class="card-category">Revenue</p>
+              <p class="card-category">Clientes</p>
               <h3 class="card-title">$34,245</h3>
             </div>
             <div class="card-footer">
@@ -55,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <!-- <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="card card-stats">
             <div class="card-header card-header-info card-header-icon">
               <div class="card-icon">
@@ -70,10 +72,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="card card-chart">
             <div class="card-header card-header-success">
               <div class="ct-chart" id="dailySalesChart"></div>
@@ -121,7 +123,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-12">

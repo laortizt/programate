@@ -16,7 +16,7 @@ class CreateProfesionalsTable extends Migration
         
         Schema::create('profesionals', function (Blueprint $table) {
             $table->increments('id');
-            $table->int('yearsExperience','50');
+            $table->year('yearsExperience','50');
             $table->string('aboutMe','200');
             $table->unsignedInteger('iduserFK');
             $table->foreign('iduserFK')->references('id')->on('users');
