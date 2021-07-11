@@ -1,27 +1,34 @@
-<!-- @extends('layouts.main', ['activePage' => 'category', 'titlePage' => ('nueva categoria')]) -->
+@extends('layouts.main', ['activePage' => 'category', 'titlePage' => ('nueva categoria')]) 
 
 @section('content')
 
-<div class="content">
-<div class="container-fluid">
-    <h1>Registrar Categoría</h1>
 
-    <div class="card" style="width: 15rem; margin: 20px auto;">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <div class="card-body">
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Crear categoria</h4>
+           
+          </div>
+          <div class="card-body">
+           
             <form action="{{url('/category')}}" method="post" enctype="multipart/form-data" novalidate class="needs-validation">
                
-                <!-- se incluye la vista del formulario  -->
+               
                 @csrf
                 @include('category.form')
                 
                 </form>
+          </div>
         </div>
-
-        
+      </div>
+      
     </div>
+  </div>
 </div>
-</div>
+
 
 
 

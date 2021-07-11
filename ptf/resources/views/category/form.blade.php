@@ -1,3 +1,4 @@
+
 <div class="mb-3">
     <label for="nameCategory" class="form-label">Nombre Categoría</label>
     <input type="text" name="nameCategory" id="nameCategory" class="form-control" value="{{isset($category->nameCategory)?$category->nameCategory:old('nameCategory')}}"aria-describedby="help" required  >

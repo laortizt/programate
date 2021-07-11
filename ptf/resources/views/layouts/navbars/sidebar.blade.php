@@ -44,7 +44,7 @@
       <li class="nav-item{{ $activePage == 'category' ? ' active' : '' }}">
         <a class="nav-link" href="{{url('/category')}}">
           <i class="material-icons">content_paste</i>
-            <p>{{ __('Crear categoría') }}</p>
+            <p>{{ __('Categorías') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">

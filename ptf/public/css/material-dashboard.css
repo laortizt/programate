@@ -8789,14 +8789,14 @@ a.text-dark:focus {
 
 .btn.btn-primary {
   color: #fff;
-  background-color: #9c27b0;
+  /* background-color: #5cadf4; */
   border-color: #9c27b0;
-  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+  /* box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12); */
 }
 
 .btn.btn-primary:hover {
   color: #fff;
-  background-color: #9124a3;
+  background-color: #5cadf4;
   border-color: #701c7e;
 }
 
@@ -8804,7 +8804,7 @@ a.text-dark:focus {
 .btn.btn-primary.focus,
 .btn.btn-primary:hover {
   color: #fff;
-  background-color: #9124a3;
+  /* background-color: #9124a3; */
   border-color: #701c7e;
 }
 
@@ -9239,9 +9239,9 @@ a.text-dark:focus {
 
 .btn.btn-danger {
   color: #fff;
-  background-color: #f44336;
+  /* background-color: #f44336; */
   border-color: #f44336;
-  box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);
+  
 }
 
 .btn.btn-danger:hover {
@@ -13437,7 +13437,7 @@ fieldset[disabled] .form-group .form-control {
 }
 
 .alert.alert-warning {
-  background-color: #ff9e0f;
+  background-color: #1d8008;
   color: #ffffff;
 }
 
@@ -16162,7 +16162,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .table>tfoot>tr>td {
   padding: 12px 8px;
   vertical-align: middle;
-  border-color: #ddd;
+  border-color: #ff9800;
 }
 
 .table thead tr th {
