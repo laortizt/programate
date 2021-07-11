@@ -15,12 +15,10 @@
           <div class="card-body">
            
             <form action="{{url('/category')}}" method="post" enctype="multipart/form-data" novalidate class="needs-validation">
-               
-               
                 @csrf
                 @include('category.form')
                 
-                </form>
+              </form>
           </div>
         </div>
       </div>
@@ -28,10 +26,4 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
 @endsection

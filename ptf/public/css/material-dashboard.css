@@ -8797,7 +8797,7 @@ a.text-dark:focus {
 .btn.btn-primary:hover {
   color: #fff;
   background-color: #5cadf4;
-  border-color: #701c7e;
+  /* border-color: #701c7e; */
 }
 
 .btn.btn-primary:focus,
@@ -8805,7 +8805,7 @@ a.text-dark:focus {
 .btn.btn-primary:hover {
   color: #fff;
   /* background-color: #9124a3; */
-  border-color: #701c7e;
+  /* border-color: #701c7e; */
 }
 
 .btn.btn-primary:active,
@@ -8861,7 +8861,7 @@ a.text-dark:focus {
 .btn.btn-primary:focus,
 .btn.btn-primary:active,
 .btn.btn-primary:hover {
-  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+  
 }
 
 .btn.btn-primary.btn-link {
@@ -9311,7 +9311,7 @@ a.text-dark:focus {
 .btn.btn-danger:focus,
 .btn.btn-danger:active,
 .btn.btn-danger:hover {
-  box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2);
+ 
 }
 
 .btn.btn-danger.btn-link {
@@ -13493,7 +13493,7 @@ fieldset[disabled] .form-group .form-control {
 }
 
 .alert.alert-warning {
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+
 }
 
 .alert.alert-warning i {

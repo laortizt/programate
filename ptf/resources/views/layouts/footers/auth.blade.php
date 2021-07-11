@@ -1,8 +1,8 @@
 <footer class="footer">
   <div class="container-fluid">
-    <nav class="float-left">
+    <!-- <nav class="float-left">
       <ul>
-        <!-- <li>
+        <li>
           <a href="https://www.creative-tim.com">
               {{ __('Creative Tim') }}
           </a>
@@ -21,17 +21,16 @@
           <a href="https://www.creative-tim.com/license">
               {{ __('Licenses') }}
           </a>
-        </li> -->
+        </li> 
       </ul>
-    </nav>
-    <div class="copyright float-right">
-      &copy;
-      <div class="copyright float-center">
-        &copy;
-        <script>
+    </nav> -->
+        <div class="copyright float-center">
+          &copy;
+      
+         <script>
             document.write(new Date().getFullYear())
-        </script>, Hecho con <i class="material-icons">favorite</i> por
-        <a href="https://laortiz.netlify.app" target="_blank"> <strong>Luz Adriana Ortiz</strong></a>.
+          </script>, Hecho con <i class="material-icons">favorite</i> por
+           <a href="https://laortiz.netlify.app" target="_blank"> <strong>Luz Adriana Ortiz</strong></a>.
         </div>
   </div>
 </footer>
