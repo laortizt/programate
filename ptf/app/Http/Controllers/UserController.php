@@ -49,15 +49,19 @@ class UserController extends Controller
         
         // return redirect('category')->with('msn','Categoría registrada exitosamente');
     }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Profesional  $profesional
-     * @return \Illuminate\Http\Response
-     */
+
+     
+    public function show($id)
+    {
+        $user = User::findOrFail($id);
+        return view('users.show', compact('user'));
+    
+    }
+
+
     public function edit($id)
     {
-        $users=User::findOrFail($id);
+        $user=User::findOrFail($id);
         $user=User::all();
         return view('user.edit',compact('user'));
     }

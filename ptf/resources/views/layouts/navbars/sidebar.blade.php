@@ -38,6 +38,12 @@
                 <span class="sidebar-normal"> {{ __('Usuarios') }} </span>
               </a>
             </li>
+          <li class="nav-item{{ $activePage == 'permission' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/permission')}}">
+                <span class="sidebar-mini"> PM </span>
+                <span class="sidebar-normal"> {{ __('Permisos') }} </span>
+              </a>
+            </li>
           </ul>
         </div>
       </li>
