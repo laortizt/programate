@@ -41,7 +41,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/category/create', [App\Http\Controllers\CategoryController::class, 'create']);
     Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create']);
     Route::get('permissions', [App\Http\Controllers\PermissionController::class, 'create']);
-    Route::get('permissions', [App\Http\Controllers\PermissionController::class, 'index']);
+    
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

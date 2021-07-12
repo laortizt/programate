@@ -14,7 +14,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions = Permission::paginate(5);
+        $permissions = Permission::paginate(10);
         return view('permission.index', compact('permissions'));
     }
 
@@ -25,7 +25,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('permission.create');
     }
 
     /**
@@ -36,7 +36,19 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Permission::create($request->all());
+        // $columns=[
+        //     'name'=>'required|string|max:125',
+        //     'guard_name'=>'required|string|max:125',
+        //  ];
+        //  $this->validate($request, $columns);
+ 
+        //  $datepermission=request()->except('_token');
+ 
+        //  Permission::insert($datepermission);
+         
+         return redirect('permission')->with('msn','Permiso registrado exitosamente');
     }
 
     /**

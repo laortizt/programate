@@ -32,15 +32,21 @@
                                     <tr>
                                         <th scope="col">Id</th>
                                         <th scope="col">Nombre</th>
-                                       
+                                        <th scope="col">Guard</th>
+                                        <th scope="col">Fecha creación</th>
+                                        <th scope="col">Editar</th>
+                                        <th scope="col">Borrar</h>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($permissions as $a)
                                     <tr>
                                         <th scope="row">{{$a->id}}</th>
-
+                                        <td>{{$a->id}}</td>
                                         <td>{{$a->name}}</td>
+                                        <td>{{$a->guard_name}}</td>
+                                        <td>{{$a->create_at}}</td>
                                      
                                         <td>
                                             <a class="btn btn-primary" href="{{url('/permission/'.$a->id.'/edit')}}" role="button">Editar</a>
