@@ -6,6 +6,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\ProfesionalController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\UserController;
 use App\Models\Category;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Route;
@@ -31,11 +32,14 @@ Route::resource('cliente', ClienteController::class);
 Route::resource('country', CountryController::class);
 Route::resource('profesional', ProfesionalController::class);
 Route::resource('project', ProjectController::class);
+Route::resource('user', UserController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/welcome', [App\Http\Controllers\Controller::class, 'welcome'])->name('welcome');
 Route::get('/category/create', [App\Http\Controllers\CategoryController::class, 'create']);
+
+Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create']);
 
 
 

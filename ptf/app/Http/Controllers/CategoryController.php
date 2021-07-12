@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $register['categories']=Category::paginate(20);
+        $register['categories']=Category::paginate(10);
         return view('category.index', $register);
     }
 

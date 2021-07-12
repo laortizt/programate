@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main', ['activePage' => 'profesional', 'titlePage' => ('profesional')])
 
 @section('content')
 

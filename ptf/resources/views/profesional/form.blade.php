@@ -1,3 +1,9 @@
+<!--
+<div class="mb-3">
+    <label class="form-label">Nombre</label>
+    {{isset($profesional->name) ? $profesional->name : old('name')}}
+</div>
+-->
 
 
 <div class="mb-3">
@@ -18,7 +24,7 @@
 
 <div class="mb-3">
     <label for="aboutMe" class="form-label">Sobre mi</label>
-    <input type="textbox" name="aboutMe" id="aboutMe" class="form-control" value="{{isset($profesional->aboutMe)?$profesional->aboutMe:old('aboutMe')}}"aria-describedby="aboutMehelp" required >
+    <input type="textbox" name="aboutMe" id="aboutMe" class="form-control" value="{{isset($profesional->aboutMe)?$profesional->aboutMe:old('aboutMe')}}" aria-describedby="aboutMehelp" required >
 
     @error('nombre')
         <small id="aboutMehelp" class="form-text text-muted">

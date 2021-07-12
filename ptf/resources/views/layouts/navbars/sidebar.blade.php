@@ -32,10 +32,10 @@
                 <span class="sidebar-normal">{{ __('User profile') }} </span>
               </a>
             </li>
-            <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
-              <a class="nav-link" href="#">
+            <li class="nav-item{{ $activePage == 'user' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/user')}}">
                 <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
+                <span class="sidebar-normal"> {{ __('Usuarios') }} </span>
               </a>
             </li>
           </ul>
@@ -53,10 +53,10 @@
             <p>{{ __('Paises') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'icons' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
+      <li class="nav-item{{ $activePage == 'profesional' ? ' active' : '' }}">
+        <a class="nav-link" href="{{url('/profesional')}}">
           <i class="material-icons">bubble_chart</i>
-          <p>{{ __('Icons') }}</p>
+          <p>{{ __('Profesionales') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">

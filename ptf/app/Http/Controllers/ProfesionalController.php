@@ -15,8 +15,8 @@ class ProfesionalController extends Controller
      */
     public function index()
     {
-        $register['users']=User::paginate(20);
-        $register['profesionals']=Profesional::all();
+        $register['users']=User::paginate(5);
+        $register['profesionals']=Profesional::with('users');
 
         return view('profesional.index', $register);
     }
@@ -28,9 +28,9 @@ class ProfesionalController extends Controller
      */
     public function create()
     {
-        $users=User::all();
+        $profesionals = Profesional::with('users');
 
-        return view('profesional.create', compact('users'));
+        return view('profesional.create', compact('profesionals'));
     }
 
     /**

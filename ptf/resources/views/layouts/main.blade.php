@@ -75,12 +75,6 @@
                 <li class="button-container">
                   <a href="https://www.creative-tim.com/product/material-dashboard-laravel" target="_blank" class="btn btn-primary btn-block">Free Download</a>
                 </li>
-                <!-- <li class="header-title">Want more components?</li>
-                    <li class="button-container">
-                        <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                          Get the pro version
-                        </a>
-                    </li> -->
                 <li class="button-container">
                   <a href="https://material-dashboard-laravel.creative-tim.com/docs/getting-started/laravel-setup.html" target="_blank" class="btn btn-default btn-block">
                     View Documentation
@@ -145,8 +139,6 @@
         <script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
         <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="{{ asset('js/material-dashboard.js?v=2.1.1') }}" type="text/javascript"></script>
-        <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-        <script src="{{ asset('demo/demo.js') }}"></script>
         <script src="{{ asset('js/settings.js') }}"></script>
         @stack('js')
     </body>

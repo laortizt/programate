@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main', ['activePage' => 'profesional', 'titlePage' => ('profesional')])
 
 @section('content')
 
@@ -22,10 +22,11 @@
     <table class="table table-dark table-hover table-responsive">
         <thead>
             <tr>
+            
                 <th scope="col">Id</th>
-                <th scope="col">Años de eperiencia</th>
+                <th scope="col">Años de experiencia</th>
                 <th scope="col">Sobre mi</th>
-                <th scope="col">Pofesional</th>
+                <th scope="col">Profesional</th>
             </tr>
         </thead>
         <tbody>

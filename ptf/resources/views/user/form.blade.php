@@ -1,12 +1,4 @@
-
-
-@extends('layouts.app', ['class' => 'off-canvas-sidebar', 'activePage' => 'register', 'title' => __('GOD  KNOWS')])
-
-@section('content')
-<div class="container" style="height: auto;">
-  <div class="row align-items-center">
-    <div class="col-lg-6 col-md-6 col-sm-8 ml-auto mr-auto">
-      <form class="form" method="POST" action="{{ route('register') }}">
+<form class="form" method="POST" action="{{ route('register') }}">
         @csrf
 
         <div class="card card-login card-hidden ">
@@ -170,7 +162,3 @@
           </div>
         </div>
       </form>
-    </div>
-  </div>
-</div>
-@endsection
