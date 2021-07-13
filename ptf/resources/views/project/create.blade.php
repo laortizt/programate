@@ -1,24 +1,36 @@
-@extends('layouts.app')
+@extends('layouts.main', ['activePage' => 'project', 'titlePage' => ('nuevo proyecto')])
 
 @section('content')
 
-<div class="container-fluid">
-    <h1>Registrar Proyectos</h1>
 
-    <div class="card" style="width: 15rem; margin: 20px auto;">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <div class="card-body">
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Crear Proyecto</h4>
+
+          </div>
+          <div class="card-body">
+
             <form action="{{url('/project')}}" method="post" enctype="multipart/form-data" novalidate class="needs-validation">
-               
-                <!-- se incluye la vista del formulario  -->
-                @csrf
-                @include('project.form')
+              @csrf
+              <div class="card">
                 
-                </form>
-        </div>
+                <div class="card-body">
+                  @include('project.form')
+                </div>
+              </div>
 
-        
+            </form>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>
 
 

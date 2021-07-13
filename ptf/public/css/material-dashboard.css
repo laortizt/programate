@@ -4472,7 +4472,7 @@ tbody.collapse.show {
   bottom: 100%;
 }
 
-.navbar-light .navbar-brand {
+.navbar-dark .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -4488,6 +4488,7 @@ tbody.collapse.show {
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
   color: rgba(0, 0, 0, 0.7);
+  text-decoration: underline;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -13035,9 +13036,10 @@ fieldset[disabled] .form-group .form-control {
   padding: 0.625rem 0;
   margin-bottom: 20px;
   height: auto !important;
-  color: #555;
-  background-color: #fff !important;
+  color: white;
+  background-color: #555 !important;
   box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+  
 }
 
 .navbar .dropdown-item:hover,
@@ -13045,6 +13047,7 @@ fieldset[disabled] .form-group .form-control {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 255, 255, 0.4);
   background-color: #fff;
   color: #555;
+  text-decoration:underline;
 }
 
 .navbar .navbar-toggler .navbar-toggler-icon {

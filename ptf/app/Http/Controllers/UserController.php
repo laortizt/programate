@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\UserCreateRequest;
+use App\Http\Requests\UserEditRequest;
 use App\Models\User;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,8 +16,8 @@ class UserController extends Controller
     */
     public function index()
     {
-        $register['users']=User::paginate(5);
-        return view('user.index', $register);
+        $user['users']=User::paginate(10);
+        return view('user.index', $user);
     }
 
      /**
@@ -25,7 +28,7 @@ class UserController extends Controller
 
     public function create()
     {
-        // $users = User::with('users');
+         $users = User::with('users');
         return view('user.create', compact('user'));
     }
 
@@ -38,25 +41,42 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        // $columns=[
-        //    'name'=>'required|string|max:100',
-        // ];
-        // $this->validate($request, $columns);
+         $columns=[
+        'name'=>'required',
+        'email'=>'required',
+        'password'=>'required',
+        'telephone'=>'required',
+        'idcountryFK'=>'required',
+        'type'=>'required',
 
-        // $datecategory=request()->except('_token');
+        ];
+        $this->validate($request, $columns);
 
-        // Category::insert($datecategory);
-        
-        // return redirect('category')->with('msn','Categoría registrada exitosamente');
+        $dateuser=request()->except('_token');
+
+        User::insert($dateuser);
+        return redirect('user')->with('msn','Usuario registrado exitosamente');
     }
 
-     
+      /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
+     */
     public function show($id)
     {
         $user = User::findOrFail($id);
-        return view('users.show', compact('user'));
+        return view('user.show', compact('user'));
     
     }
+
+     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
+     */
 
 
     public function edit($id)
@@ -66,5 +86,50 @@ class UserController extends Controller
         return view('user.edit',compact('user'));
     }
 
+     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
+     */
+
+    public function update(Request $request, $id)
+    {
+        
+        $columns=[
+        'name'=>'required',
+        'email'=>'required',
+        'password'=>'required',
+        'telephone'=>'required',
+        'idcountryFK'=>'required',
+        'type'=>'required',
+        ];
+
+        $this->validate($request, $columns);
+
+        $dateuser=request()->except('_token','_method');
+       
+        User::where('id','=',$id)->update( $dateuser);
+        return redirect('user')->with('msn','Usuario actualizado exitosamente');
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        User::destroy($id);
+        
+
+        // $album=Album::findOrFail($id);
+
+        // if(Storage::delete('public/'.$album->photo)){
+        //     Album::destroy($id);
+        // }
+        return redirect('user')->with('msn','Usuario eliminado exitosamente');
+    }
 
 }

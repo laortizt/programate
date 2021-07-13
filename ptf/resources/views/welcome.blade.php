@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Good Knows</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -405,15 +405,15 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">God Knows</a>
+            <a class="navbar-brand" href="#">God Knows</a>   <i class="material-icons">vpn_key</i>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse relative flex items-top justify-center text-end" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('login') }}">Iniciar sesión</a>
@@ -426,7 +426,6 @@
             </div>
         </div>
     </nav>
-
 
 
     <section class="bg-blurring">
@@ -459,7 +458,7 @@
 
                             <div class="spacer-double"></div>
 
-                           
+                            <h1 class="title-welcome">La mejor plataforma para profesionales</h1>
                             
                         </div>
 

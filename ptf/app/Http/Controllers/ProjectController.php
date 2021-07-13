@@ -30,7 +30,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $projects=Category::all();
+        $projects=Project::all();
         $categories=Category::all();
         $profesionals=Profesional::all();
         return view('project.create', compact('categories','profesionals'));

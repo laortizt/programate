@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<div class="mb-3">
+<!-- <div class="mb-3">
     <label for="iduserFK" class="form-label">Seleccione el profesional</label>
     
     <select class="form-select" aria-label="Default select example" name='iduserFK' id="iduserFK"
@@ -64,7 +64,7 @@
     <div class="invalid-feedback">
        *El campo es obligatorio
     </div>
-</div>
+</div> -->
 
 <div class="mb-3">
     <label for="photo" class="form-label">Ingrese una foto</label>

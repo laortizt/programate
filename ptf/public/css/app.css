@@ -25,10 +25,9 @@
 }
 
 .bg-blurring {
-    /* background: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
-        no-repeat center center/cover;  */
-    background: url('https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fHBlb3BsZSUyMGF0JTIwd29ya3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')
-    no-repeat center center/cover; 
+    background: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
+        no-repeat center center/cover; 
+   
    
     position: absolute;
     top: 0;
@@ -44,10 +43,13 @@
 }
 .title-welcome{
     color: white;
-    
+    font-weight: bold;
+    background-color: rgba(30, 30, 30, 0.7);
+    display: block;
+    padding: 10px 20px;
 }
 .nav-link:hover{
-    background-color: yellow;
+    
     color: black;
 }
 @media (min-width: 992px) {
@@ -4321,13 +4323,13 @@ input[type=button].btn-block {
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
 }
-.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+.navbar-light .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
   color: rgba(0, 0, 0, 0.9);
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.5);
 }
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+.navbar-light .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: rgba(0, 0, 0, 0.7);
 }
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -4352,7 +4354,7 @@ input[type=button].btn-block {
 .navbar-light .navbar-text a {
   color: rgba(0, 0, 0, 0.9);
 }
-.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
+.navbar-light .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -4367,6 +4369,7 @@ input[type=button].btn-block {
 }
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
 }
 .navbar-dark .navbar-nav .nav-link.disabled {
   color: rgba(255, 255, 255, 0.25);

@@ -36,6 +36,7 @@
                                         <th scope="col">Email</th>
                                         <th scope="col">Telefono</th>
                                         <th scope="col">Rol</th>
+                                        <th scope="col">Acciones</th>
 
                                     </tr>
                                 </thead>
@@ -56,7 +57,7 @@
                                             <td>Administrador</td>
                                         @endif
 
-                                        <!-- <td>
+                                        <td>
                                             <a class="btn btn-primary" href="{{url('/user/'.$a->id.'/edit')}}" role="button">Editar</a>
                                         </td>
                                         <td>
@@ -65,7 +66,7 @@
                                                 {{method_field('DELETE')}}
                                                 <input type="submit" value="Borrar" onclick="return confirm('¿Esta seguro de eliminar el registro?')" class="btn btn-danger">
                                             </form>
-                                        </td> -->
+                                        </td> 
                                     </tr>
                                     @endforeach
                                 </tbody>

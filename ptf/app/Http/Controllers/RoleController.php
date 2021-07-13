@@ -29,7 +29,7 @@ class RoleController extends Controller
     public function create()
     {
 
-        $permissions=Permission::all()->pluck('name', 'id');
+        $permissions = Permission::all()->pluck('name', 'id');
         return view('role.create', compact('permissions'));
     }
 
@@ -78,11 +78,11 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $role)
+    public function update(Request $request, Role $role)
     {
         $role->update($request->only('name'));
 
-        $role->permission()->sync($request->input('permission', []));
+        $role->permissions()->sync($request->input('permissions', []));
         return redirect('role')->with('msn','Rol actualizado exitosamente');   
     }
 
@@ -92,9 +92,9 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Role $role)
     {
-        Role::destroy($id);
+        $role->delete();
         return redirect('role')->with('msn','Rol eliminado exitosamente');
     }
 }

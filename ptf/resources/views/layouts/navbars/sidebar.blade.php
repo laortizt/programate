@@ -11,88 +11,138 @@
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
-      <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
+      <!-- <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('home') }}">
           <i class="material-icons">dashboard</i>
             <p>{{ __('Dashboard') }}</p>
         </a>
-      </li>
+      </li> -->
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
-          <p>{{ __('Laravel Examples') }}
+          <i class="material-icons">library_books</i>
+          <p>{{ __('Administrador') }}
             <b class="caret"></b>
           </p>
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
+            <!-- <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="#">
                 <span class="sidebar-mini"> UP </span>
                 <span class="sidebar-normal">{{ __('User profile') }} </span>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item{{ $activePage == 'user' ? ' active' : '' }}">
               <a class="nav-link" href="{{url('/user')}}">
-                <span class="sidebar-mini"> UM </span>
+                <i class="material-icons">people_alt</i>
                 <span class="sidebar-normal"> {{ __('Usuarios') }} </span>
               </a>
             </li>
-          <li class="nav-item{{ $activePage == 'permission' ? ' active' : '' }}">
+            <li class="nav-item{{ $activePage == 'permission' ? ' active' : '' }}">
               <a class="nav-link" href="{{url('/permission')}}">
-                <span class="sidebar-mini"> PM </span>
+                <i class="material-icons">vpn_key</i>
                 <span class="sidebar-normal"> {{ __('Permisos') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'role' ? ' active' : '' }}">
               <a class="nav-link" href="{{url('/role')}}">
-                <span class="sidebar-mini"> PM </span>
+                <i class="material-icons">manage_accounts</i>
                 <span class="sidebar-normal"> {{ __('Roles') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'category' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/category')}}">
+                <i class="material-icons">category</i>
+                <p>{{ __('Categorías') }}</p>
+              </a>
+            </li>
+
+            <li class="nav-item{{ $activePage == 'country' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/country')}}">
+                <i class="material-icons">emoji_flags</i>
+                <p>{{ __('Paises') }}</p>
               </a>
             </li>
 
 
           </ul>
+
         </div>
-        
+
       </li>
-      <li class="nav-item{{ $activePage == 'category' ? ' active' : '' }}">
-        <a class="nav-link" href="{{url('/category')}}">
-          <i class="material-icons">content_paste</i>
-            <p>{{ __('Categorías') }}</p>
-        </a>
-      </li>
-      <li class="nav-item{{ $activePage == 'country' ? ' active' : '' }}">
-        <a class="nav-link" href="{{url('/country')}}">
+
+      <!-- profesionals-->
+      <li class="nav-item {{ ($activePage == 'profesional' || $activePage == 'profesional-management') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#laravelExample2" aria-expanded="true">
           <i class="material-icons">library_books</i>
-            <p>{{ __('Paises') }}</p>
+          <p>{{ __('Profesional') }}
+            <b class="caret"></b>
+          </p>
         </a>
+        <div class="collapse show" id="laravelExample2">
+          <ul class="nav">
+            
+            <li class="nav-item{{ $activePage == 'project' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/project')}}">
+                <i class="material-icons">people_alt</i>
+                <span class="sidebar-normal"> {{ __('Projectos') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'certificate' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/certificate')}}">
+                <i class="material-icons">vpn_key</i>
+                <span class="sidebar-normal"> {{ __('Certificados') }} </span>
+              </a>
+            </li>
+            
+          </ul>
+
+        </div>
+
       </li>
-      <li class="nav-item{{ $activePage == 'profesional' ? ' active' : '' }}">
-        <a class="nav-link" href="{{url('/profesional')}}">
-          <i class="material-icons">bubble_chart</i>
-          <p>{{ __('Profesionales') }}</p>
+
+      <!-- client-->
+      <li class="nav-item {{ ($activePage == 'profesional' || $activePage == 'profesional-management') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#laravelExample3" aria-expanded="true">
+          <i class="material-icons">library_books</i>
+          <p>{{ __('Cliente') }}
+            <b class="caret"></b>
+          </p>
         </a>
+        <div class="collapse show" id="laravelExample3">
+          <ul class="nav">
+            
+            <li class="nav-item{{ $activePage == 'project' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/user')}}">
+                <i class="material-icons">people_alt</i>
+                <span class="sidebar-normal"> {{ __('Profesionales') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'certificate' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/permission')}}">
+                <i class="material-icons">vpn_key</i>
+                <span class="sidebar-normal"> {{ __('Certificados') }} </span>
+              </a>
+            </li>
+            
+          </ul>
+
+        </div>
+
       </li>
-      <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
-          <i class="material-icons">location_ons</i>
-            <p>{{ __('Maps') }}</p>
-        </a>
-      </li>
-      <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
-          <i class="material-icons">notifications</i>
-          <p>{{ __('Notifications') }}</p>
-        </a>
-      </li>
-      <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
-          <i class="material-icons">language</i>
-          <p>{{ __('RTL Support') }}</p>
-        </a>
-      </li>
-      
+
+
+
+
+
+
+
+
     </ul>
+
+    
+    
   </div>
+
+  
 </div>
