@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfesionalController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RoleController;
 use App\Models\Category;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Route;
@@ -35,13 +36,16 @@ Route::resource('profesional', ProfesionalController::class);
 Route::resource('project', ProjectController::class);
 Route::resource('user', UserController::class);
 Route::resource('permission', PermissionController::class);
+Route::resource('role', RoleController::class);
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/category/create', [App\Http\Controllers\CategoryController::class, 'create']);
     Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create']);
-    Route::get('permissions', [App\Http\Controllers\PermissionController::class, 'create']);
-    
+    Route::get('/permissions', [App\Http\Controllers\PermissionController::class, 'create']);
+    Route::get('/permission/{id}/show', [App\Http\Controllers\PermissionController::class, 'show'])->name('permission.show');
+    Route::get('/role/{id}/show', [App\Http\Controllers\RoleController::class, 'show'])->name('role.show');
+    Route::get('/role/create', [App\Http\Controllers\RoleController::class, 'create'])->name('role.create');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

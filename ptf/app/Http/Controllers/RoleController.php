@@ -2,30 +2,35 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
-class PermissionController extends Controller
+class RoleController extends Controller
 {
-    /**
+
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $permissions = Permission::paginate(10);
-        return view('permission.index', compact('permissions'));
+        $roles = Role::paginate(10);
+        return view('role.index', compact('roles'));
     }
 
-    /**
+     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return view('permission.create');
+
+        $permissions=Permission::all()->pluck('name', 'id');
+        return view('role.create', compact('permissions'));
     }
 
     /**
@@ -36,8 +41,10 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        Permission::create($request->only('name'));
-        return redirect('permission')->with('msn','Permiso registrado exitosamente');
+        $role = Role::create($request->only('name'));
+        $role->permissions()->sync($request->input('permissions', []));
+
+        return redirect('role')->with('msn','Rol registrado exitosamente');
     }
 
     /**
@@ -46,25 +53,24 @@ class PermissionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Role $role)
     {
-        $permissions=Permission::find($id);
-        //dd($permission);
-        return view('permission.show', compact('permissions'));
+        $role->load('permissions');
+        return view('role.show', compact('role'));
     }
 
-    /**
+     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Role $role)
     {
-        $permission=Permission::findOrFail($id);
-        return view('permission.edit',compact('permission'));
+        $permissions = Permission::all()->pluck('name', 'id');
+        $role->load('permissions');
+        return view('role.edit', compact('role', 'permissions'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -72,22 +78,15 @@ class PermissionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $role)
     {
-        $columns=[
-           
-            'name'=>'required|string|max:100',
-        ];
-        
-         $this->validate($request, $columns);
+        $role->update($request->only('name'));
 
-        $datepermission=request()->except('_token','_method');
-        Permission::where('id','=',$id)->update($datepermission);
-        return redirect('permission')->with('msn','Permiso actualizado exitosamente');
-        
+        $role->permission()->sync($request->input('permission', []));
+        return redirect('role')->with('msn','Rol actualizado exitosamente');   
     }
 
-    /**
+     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -95,7 +94,9 @@ class PermissionController extends Controller
      */
     public function destroy($id)
     {
-        Permission::destroy($id);
-        return redirect('permission')->with('msn','Permiso eliminado exitosamente');
+        Role::destroy($id);
+        return redirect('role')->with('msn','Rol eliminado exitosamente');
     }
 }
+
+

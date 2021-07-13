@@ -44,8 +44,17 @@
                 <span class="sidebar-normal"> {{ __('Permisos') }} </span>
               </a>
             </li>
+            <li class="nav-item{{ $activePage == 'role' ? ' active' : '' }}">
+              <a class="nav-link" href="{{url('/role')}}">
+                <span class="sidebar-mini"> PM </span>
+                <span class="sidebar-normal"> {{ __('Roles') }} </span>
+              </a>
+            </li>
+
+
           </ul>
         </div>
+        
       </li>
       <li class="nav-item{{ $activePage == 'category' ? ' active' : '' }}">
         <a class="nav-link" href="{{url('/category')}}">

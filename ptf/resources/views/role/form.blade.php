@@ -1,7 +1,7 @@
 
 <div class="mb-3">
-    <label for="name" class="form-label">Nombre Permiso</label>
-    <input type="text" name="name" id="name" class="form-control" value="{{isset($permission->name)?$permission->name:old('name')}}"aria-describedby="help" required  >
+    <label for="name" class="form-label">Nombre rol</label>
+    <input type="text" name="name" id="name" class="form-control" value="{{isset($role->name)?$role->name:old('name')}}"aria-describedby="help" required  >
 
     @error('name')
         <small id="name" class="form-text text-muted">
